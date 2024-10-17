@@ -1,5 +1,5 @@
 {% extends 'hod_templates/base_template.html'%} {% load crispy_forms_tags %} {% block page_title %}
-<h5>Add patient</h5>
+<h5>Добавить пациента</h5>
 
 {% endblock page_title %} {% block main_content %}
 <section class="content" style="">
@@ -10,7 +10,7 @@
                 <!-- general form elements -->
                 <div class="card card-info">
                     <div class="card-header">
-                        <h3 class="card-title">Add Patient</h3>
+                        <h3 class="card-title">Добавить пациента</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
@@ -26,10 +26,10 @@
                                                                     <span aria-hidden="true">
                                                                         <i class="fa fa-times danger "></i>
                                                                     </span>
-                                                                    <span class="sr-only">Close</span>
+                                                                    <span class="sr-only">Закрывать</span>
                                                                 </button>
                                         <i class="start-icon far fa-times-circle faa-pulse animated"></i>
-                                        <strong class="font__weight-semibold">Oh snap!</strong> {{message}}
+                                        <strong class="font__weight-semibold">О, нет!</strong> {{message}}
                                     </div>
                                 </div>
                                 {% elif message.tags == "success" %}
@@ -38,10 +38,10 @@
                                                                   <span aria-hidden="true">
                                                   <i class="fa fa-times greencross"></i>
                                                   </a></span>
-                                                                  <span class="sr-only">Close</span> 
+                                                                  <span class="sr-only">Закрывать</span> 
                                                               </button>
                                     <i class="start-icon far fa-check-circle faa-tada animated"></i>
-                                    <strong class="font__weight-semibold">Well done!</strong> {{message}}
+                                    <strong class="font__weight-semibold">Очень хорошо</strong> {{message}}
                                 </div>
                                 {% endif %} {% endfor %}
                             </div>

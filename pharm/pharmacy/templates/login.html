@@ -183,22 +183,22 @@ button[type="submit"]:hover {
 											{% csrf_token %}
 									  <div class=" ">
 								   <div class="form-group ">
-									   <label for=""class="text-muted">Username</label>
+									   <label for="" class="text-muted">Имя пользователя</label>
 										<div class="input-group ">
 												<div class="input-group-prepend">
 												  <span class="input-group-text"><i class="fas fa-user"></i></span>
 												</div>
-												<input type="text" class="form-control" name="username" placeholder="Username">
+												<input type="text" class="form-control" name="username" placeholder="Имя пользователя">
 											  </div>
 								   </div>
 									 
 									<div class="form-group">
-										<label for="" class="text-muted">Password</label>
+										<label for="" class="text-muted">Пароль</label>
 											<div class="input-group mb-5">
 													<div class="input-group-prepend">
 													  <span class="input-group-text"><i class="fas fa-lock"></i></span>
 													</div>
-													<input type="password" class="form-control" name="password" placeholder="Password">
+													<input type="password" class="form-control" name="password" placeholder="Пароль">
 												  </div>
 									</div>
 									  </div>
@@ -208,7 +208,7 @@ button[type="submit"]:hover {
 										<a class="text-secondary " href="{% url 'reset_password' %}">Forgot password?</a>
 									  </div>
 									  <div class="form-group">
-										<button class="btn btn-primary" type="submit">Login</button>
+										<button class="btn btn-primary" type="submit">Логин</button>
 										
 									  </div>
 									</form>
