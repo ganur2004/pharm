@@ -1,7 +1,7 @@
 {% extends 'hod_templates/base_template.html'%}
 {% load static %}
 {% block page_title %}
-<h5>All patients</h5>
+<h5>Все пациенты</h5>
 
 {% endblock page_title %}
 {% block main_content %}
@@ -36,11 +36,11 @@
                 
             <div class="card card-primar sc">
                 <div class="card-header">
-                    <span>Patiets Records</span>
+                    <span>Записи о пациентах</span>
                    <div class="card-tools d-flex">
                        
               
-                <a class="btn btn-sm btn-info mr-2" href="{% url 'patient_form' %}" role="button">+ Add Staff</a> 
+                <a class="btn btn-sm btn-info mr-2" href="{% url 'patient_form' %}" role="button">+ Добавить персонал</a> 
 
             </div>
 
@@ -49,15 +49,15 @@
                     <thead>
                             <tr>
                                     <th>No</th>
-                                    <th>Profile</th>
-                                    <th>UserName</th>
-                                    <th>LastName</th>
+                                    <th>Профиль</th>
+                                    <th>Имя пользователя</th>
+                                    <th>Фамилия</th>
                                     <th>Email</th>
             
-                                    <th>Mobile</th>
+                                    <th>Мобильный</th>
             
-                                     <th>Last Login</th>
-                                     <th class="text-center">Action</th>
+                                     <th>Последний вход</th>
+                                     <th class="text-center">Действие</th>
                                     
         
                             </tr>
@@ -75,9 +75,9 @@
         
                                 <td>{{patient.admin.last_login}}</td>
 
-                                <td><a href="{% url 'edit_patient' patient.admin.id %}" class="btn btn-sm btn-success">Edit</a>                     
-                                    <a href="{% url 'delete_patient' patient.id %}" class="btn btn-sm btn-danger">Delete</a></<a>
-                                    <a href="{% url 'patient_record' patient.id %}" class="btn btn-sm btn-warning">View</a></td> 
+                                <td><a href="{% url 'edit_patient' patient.admin.id %}" class="btn btn-sm btn-success">Редактировать</a>                     
+                                    <a href="{% url 'delete_patient' patient.id %}" class="btn btn-sm btn-danger">Удалить</a></<a>
+                                    <a href="{% url 'patient_record' patient.id %}" class="btn btn-sm btn-warning">Смотреть</a></td> 
             
                             </tr>
                             {% endfor %}

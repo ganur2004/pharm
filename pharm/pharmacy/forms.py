@@ -27,20 +27,20 @@ class ClientForm(forms.Form):
 
 class PatientForm(forms.Form):
 
-    username = forms.CharField(label="Username", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
-    email = forms.EmailField(label="Email", max_length=50, widget=forms.EmailInput(attrs={"class":"form-control"}))
-    password = forms.CharField(label="Password", max_length=50, widget=forms.PasswordInput(attrs={"class":"form-control"}))
-    reg_no = forms.CharField(label="Reg No", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
-    first_name = forms.CharField(label="First Name", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
-    last_name = forms.CharField(label="Last Name", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
-    address = forms.CharField(label="Address", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
-    phone_number = forms.CharField(label="Mobile", max_length=50)
+    username = forms.CharField(label="Имя пользователя", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
+    email = forms.EmailField(label="Электронная почта", max_length=50, widget=forms.EmailInput(attrs={"class":"form-control"}))
+    password = forms.CharField(label="Пароль", max_length=50, widget=forms.PasswordInput(attrs={"class":"form-control"}))
+    reg_no = forms.CharField(label="Регистрационный номер", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
+    first_name = forms.CharField(label="Имя", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
+    last_name = forms.CharField(label="Фамилия", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
+    address = forms.CharField(label="Адрес", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
+    phone_number = forms.CharField(label="Мобильный", max_length=50)
     gender_list = (
-        ('Male','Male'),
-        ('Female','Female')
+        ('Male','М'),
+        ('Female','Ж')
     )
-    gender = forms.ChoiceField(label="Gender", choices=gender_list, widget=forms.Select(attrs={"class":"form-control"}))
-    dob= forms.DateField(label="dob", widget=DateInput(attrs={"class":"form-control"}))
+    gender = forms.ChoiceField(label="Пол", choices=gender_list, widget=forms.Select(attrs={"class":"form-control"}))
+    dob= forms.DateField(label="Дата рождения", widget=DateInput(attrs={"class":"form-control"}))
 
     # Validations for patient
     def clean_reg_no(self):
@@ -91,7 +91,7 @@ class PatientForm(forms.Form):
         return last_name
 
 class EditPatientForm(forms.Form):
-    username = forms.CharField(label="Username", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
+    username = forms.CharField(label="Имя пользователя", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
     email = forms.EmailField(label="Email", max_length=50, widget=forms.EmailInput(attrs={"class":"form-control"}))
     
     first_name = forms.CharField(label="First Name", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))

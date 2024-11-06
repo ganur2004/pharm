@@ -83,7 +83,7 @@ def createPatient(request):
             user.patients.gender=gender
 
             user.save()
-            messages.success(request, username +' was Successfully Added')
+            messages.success(request, username +' успешно добавлен')
 
             return redirect('patient_form')
 
